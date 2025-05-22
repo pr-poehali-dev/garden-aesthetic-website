@@ -3,16 +3,27 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center py-4 px-8 md:px-12 lg:px-16">
-      <div className="flex items-center">
-        <h1 className="text-lg md:text-xl font-medium text-white">Садовая Эстетика</h1>
+    <header className="absolute top-0 left-0 right-0 z-10 py-6 px-8">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <Link to="/" className="text-white text-xl md:text-2xl font-serif tracking-wide">
+          Садовая Эстетика .
+        </Link>
+        
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link to="/" className="text-white hover:text-garden-accent transition-colors">
+            ГЛАВНАЯ
+          </Link>
+          <Link to="/blog" className="text-white hover:text-garden-accent transition-colors">
+            БЛОГ
+          </Link>
+          <Link to="/contact" className="text-white hover:text-garden-accent transition-colors">
+            КОНТАКТЫ
+          </Link>
+          <Link to="/shop" className="text-white hover:text-garden-accent transition-colors">
+            МАГАЗИН
+          </Link>
+        </nav>
       </div>
-      <nav className="hidden md:flex gap-6">
-        <Link to="/" className="text-white hover:opacity-75 transition-opacity duration-200">ГЛАВНАЯ</Link>
-        <Link to="/blog" className="text-white hover:opacity-75 transition-opacity duration-200">БЛОГ</Link>
-        <Link to="/contact" className="text-white hover:opacity-75 transition-opacity duration-200">КОНТАКТЫ</Link>
-        <Link to="/about" className="text-white hover:opacity-75 transition-opacity duration-200">О НАС</Link>
-      </nav>
     </header>
   );
 };
