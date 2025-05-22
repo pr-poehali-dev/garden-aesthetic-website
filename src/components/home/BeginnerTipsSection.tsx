@@ -1,62 +1,43 @@
 
-import { Card } from "@/components/ui/card";
-
-interface TipCardProps {
-  title: string;
-  content: string;
-  quote: string;
-}
-
-const TipCard = ({ title, content, quote }: TipCardProps) => {
-  return (
-    <Card className="p-6 bg-white shadow-sm hover:shadow-md transition-shadow border-none">
-      <h3 className="text-xl font-serif font-medium text-garden-green mb-4">{title}</h3>
-      <p className="mb-4 text-[#555555]">{content}</p>
-      <p className="text-garden-green italic text-sm">{quote}</p>
-    </Card>
-  );
-};
+import { Button } from "@/components/ui/button";
 
 const BeginnerTipsSection = () => {
   return (
-    <section className="py-16 px-4 md:px-8 bg-garden-bg">
+    <section className="py-16 px-4 md:px-8 bg-[#FEFAE0]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl text-garden-green mb-4">
-            СОВЕТЫ ДЛЯ НАЧИНАЮЩИХ
-          </h2>
-          <p className="max-w-2xl mx-auto text-[#555555]">
-            Начать путь в садоводстве может показаться сложным, но на самом деле для этого нужно всего несколько простых шагов.
-          </p>
+        <div className="flex items-center justify-center mb-8">
+          <div className="h-[1px] w-16 bg-[#606C38]"></div>
+          <span className="mx-4 text-sm text-[#606C38] uppercase tracking-widest">Для начинающих</span>
+          <div className="h-[1px] w-16 bg-[#606C38]"></div>
         </div>
+        
+        <h2 className="text-3xl md:text-4xl text-[#606C38] mb-8 text-center font-['Cormorant']">
+          СОВЕТЫ ДЛЯ НОВИЧКОВ
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <TipCard 
-            title="Начните с малого"
-            content="Одно растение на подоконнике — это уже начало. Выберите неприхотливое растение, которое будет радовать вас каждый день."
-            quote={'\"Путь в тысячу миль начинается с первого шага.\" — Лао-цзы'}
-          />
+          <div className="bg-white p-6 rounded-sm shadow-sm">
+            <h3 className="font-['Cormorant'] text-2xl text-[#606C38] mb-4">Начните с малого</h3>
+            <p className="text-[#555555] mb-4">Не пытайтесь сразу создать идеальный сад. Начните с нескольких растений, которые несложно выращивать.</p>
+            <Button className="bg-[#606C38] hover:bg-[#4c5a26] text-white rounded-sm">
+              ПОДРОБНЕЕ
+            </Button>
+          </div>
           
-          <TipCard 
-            title="Выделите 5 минут в день"
-            content="Уход за растениями не требует много времени. Даже 5 минут ежедневного внимания могут творить чудеса для ваших зеленых друзей."
-            quote={'\"Постоянство — залог успеха в садоводстве.\"'}
-          />
+          <div className="bg-white p-6 rounded-sm shadow-sm">
+            <h3 className="font-['Cormorant'] text-2xl text-[#606C38] mb-4">Познайте свою почву</h3>
+            <p className="text-[#555555] mb-4">Качество почвы — основа успешного садоводства. Научитесь определять тип почвы и как её улучшить.</p>
+            <Button className="bg-[#606C38] hover:bg-[#4c5a26] text-white rounded-sm">
+              ПОДРОБНЕЕ
+            </Button>
+          </div>
           
-          <TipCard 
-            title="Отпустите страх неудачи"
-            content="Даже опытные садоводы теряют растения. Каждая неудача — это урок, который приближает вас к мастерству."
-            quote={'\"В саду больше растёт, чем посажено садовником.\"'}
-          />
-        </div>
-        
-        <div className="mt-16 text-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="mb-4">
-              <p className="text-[#606C38] italic font-['Cormorant'] text-xl">
-                {"\"Лучшее время посадить дерево было 20 лет назад. Второе лучшее время — сейчас.\""}
-              </p>
-            </div>
+          <div className="bg-white p-6 rounded-sm shadow-sm">
+            <h3 className="font-['Cormorant'] text-2xl text-[#606C38] mb-4">Сезонное планирование</h3>
+            <p className="text-[#555555] mb-4">Создайте календарь посадок и ухода за садом. Правильное планирование — залог красивого сада круглый год.</p>
+            <Button className="bg-[#606C38] hover:bg-[#4c5a26] text-white rounded-sm">
+              ПОДРОБНЕЕ
+            </Button>
           </div>
         </div>
       </div>

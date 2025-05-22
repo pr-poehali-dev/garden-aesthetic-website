@@ -1,69 +1,64 @@
 
 import { Link } from "react-router-dom";
 
-interface CategoryCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-}
-
-const CategoryCard = ({ title, description, imageUrl, link }: CategoryCardProps) => {
-  return (
-    <div className="group relative overflow-hidden rounded-md">
-      <img 
-        src={imageUrl} 
-        alt={title} 
-        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-        <h3 className="text-white text-xl font-serif mb-2">{title}</h3>
-        <p className="text-white/80 text-sm mb-4">{description}</p>
-        <Link 
-          to={link} 
-          className="inline-block bg-garden-accent text-white px-4 py-2 rounded-sm text-sm hover:bg-garden-accent/90 transition-colors"
-        >
-          ИЗУЧИТЬ
-        </Link>
-      </div>
-    </div>
-  );
-};
-
 const CategoriesSection = () => {
   return (
-    <section className="py-16 px-4 md:px-8 bg-white">
+    <section className="py-16 px-4 md:px-8 bg-[#FAEDCD]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl text-garden-green mb-4">
-            ИССЛЕДУЙТЕ КАТЕГОРИИ
-          </h2>
-          <p className="max-w-2xl mx-auto text-[#555555]">
-            Погрузитесь в различные аспекты садовой эстетики, от выращивания растений до создания уютного пространства.
-          </p>
+        <div className="flex items-center justify-center mb-8">
+          <div className="h-[1px] w-16 bg-[#606C38]"></div>
+          <span className="mx-4 text-sm text-[#606C38] uppercase tracking-widest">Исследуйте</span>
+          <div className="h-[1px] w-16 bg-[#606C38]"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <CategoryCard 
-            title="ДИЗАЙН САДА"
-            description="Создайте свой уголок рая с идеями ландшафтного дизайна."
-            imageUrl="https://images.unsplash.com/photo-1558293842-c0fd3db86157?q=80&w=1974"
-            link="/design"
-          />
+        <h2 className="text-3xl md:text-4xl text-[#606C38] mb-8 text-center font-['Cormorant']">
+          КАТЕГОРИИ
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Link to="/design" className="group relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1558618047-f4b511aae74d?q=80&w=2036" 
+              alt="Дизайн сада" 
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <h3 className="text-white text-2xl font-['Cormorant']">ДИЗАЙН</h3>
+            </div>
+          </Link>
           
-          <CategoryCard 
-            title="ВЫРАЩИВАНИЕ"
-            description="Советы по выращиванию здоровых и красивых растений."
-            imageUrl="https://images.unsplash.com/photo-1599588865171-d297bbe8f9c4?q=80&w=2070"
-            link="/growing"
-          />
+          <Link to="/style" className="group relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1632729306621-41db4f88a6b9?q=80&w=2070" 
+              alt="Садовый стиль" 
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <h3 className="text-white text-2xl font-['Cormorant']">СТИЛЬ</h3>
+            </div>
+          </Link>
           
-          <CategoryCard 
-            title="РЕЦЕПТЫ ИЗ САДА"
-            description="Блюда и напитки из свежих продуктов вашего сада."
-            imageUrl="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1935"
-            link="/recipes"
-          />
+          <Link to="/gardening" className="group relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1599686255407-90a86f716c6d?q=80&w=1974" 
+              alt="Садоводство" 
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <h3 className="text-white text-2xl font-['Cormorant']">САДОВОДСТВО</h3>
+            </div>
+          </Link>
+          
+          <Link to="/recipes" className="group relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1627314935367-abe306ccce4f?q=80&w=2070" 
+              alt="Рецепты" 
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <h3 className="text-white text-2xl font-['Cormorant']">РЕЦЕПТЫ</h3>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
