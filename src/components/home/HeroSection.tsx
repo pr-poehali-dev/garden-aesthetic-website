@@ -15,13 +15,13 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative z-1 max-w-4xl mx-auto">
-        <h2 className="font-['Cormorant'] text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-4">
+        <h2 className="font-['Cormorant'] text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-2">
           STYLE, RECIPES, & STORIES
         </h2>
-        <p className="font-['Cormorant'] text-2xl md:text-3xl text-white italic mb-8">
+        <p className="font-['Cormorant'] text-3xl md:text-4xl text-white italic mb-6 opacity-90">
           from the Farm
         </p>
-        <p className="text-white/90 max-w-2xl mx-auto mb-8 text-lg">
+        <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
           A homesteading lifestyle blog sharing our life from our Oklahoma farm
         </p>
         <Button
